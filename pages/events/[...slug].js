@@ -2,7 +2,6 @@ import { useRouter } from "next/router";
 
 function Everthing() {
     const route = useRouter();
-    console.log(route.query)
 
     return (
         <div>
