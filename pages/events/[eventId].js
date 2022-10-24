@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 
-function SomeEvent() {
+function EventDetailPage() {
     const route = useRouter();
 
     return (
@@ -10,4 +10,4 @@ function SomeEvent() {
     )
 };
 
-export default SomeEvent;
+export default EventDetailPage;
