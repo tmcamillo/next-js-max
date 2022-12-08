@@ -1,11 +1,19 @@
-import { getFeaturedEvents } from "../helpers/api-utils"
-import EventList from '../components/events/event-list'
+import Head from 'next/head';
+
+import { getFeaturedEvents } from "../helpers/api-utils";
+import EventList from '../components/events/event-list';
 
 function HomePage(props) {
   return (
-    <div>
-      <EventList list={props.events}/>
-    </div>
+    <>
+      <Head>
+        <title>NextJS Events</title>
+        <meta name='description' content='Find a lot of great events that allow you to evolve.'/>
+      </Head>
+      <div>
+        <EventList list={props.events}/>
+      </div>
+    </>
   )
 }
 

@@ -1,4 +1,6 @@
 import { useRouter } from "next/router";
+import Head from 'next/head';
+
 import ResultsTitle from "../../components/event-detail/results-title";
 import EventList from "../../components/events/event-list";
 import Button from "../../components/ui/button";
@@ -35,6 +37,10 @@ function FilteredEventsPage(props) {
 
     return (
         <>
+            <Head>
+                <title>Filtered Events</title>
+                <meta name='description' content={`All events for ${props.date.month}/${props.date.year }`}/>
+            </Head>
             <ResultsTitle date={dateFormatted}/>
             <EventList list={filteredEvents} />
         </>
