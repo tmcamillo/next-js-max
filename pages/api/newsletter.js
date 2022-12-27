@@ -5,7 +5,6 @@ async function handler(req,res) {
         const userEmail = req.body.email
 
         if(!userEmail || !userEmail.includes('@')){
-            console.log(userEmail);
             res.status(422).json({message: 'Invalid email address.'});
             return;
         }

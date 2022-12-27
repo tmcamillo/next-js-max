@@ -6,7 +6,6 @@ const USER = process.env.REACT_APP_MGUSER;
 
 export async function connectDatabase() {
     const url = `mongodb+srv://${USER}:${KEY}@cluster0.bfble3u.mongodb.net/events?retryWrites=true&w=majority`;
-    console.log(USER, KEY)
     const client = new MongoClient(url);
     client.connect();
     return client;

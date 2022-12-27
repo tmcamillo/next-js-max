@@ -16,7 +16,6 @@ function NewComment(props) {
     const enteredComment = commentInputRef.current.value;
 
     if (
-      //client-side validations
       !enteredEmail ||
       enteredEmail.trim() === '' ||
       !enteredEmail.includes('@') ||
