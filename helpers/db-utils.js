@@ -1,11 +1,13 @@
 import { MongoClient } from 'mongodb';
 
 // https://www.npmjs.com/package/mongodb
-const KEY = process.env.REACT_APP_MGKEY;
-const USER = process.env.REACT_APP_MGUSER;
+const KEY = process.env.mongodb_password;
+const USER = process.env.mongodb_username;
+const CLUSTER = process.env.mongodb_clustername;
+const DBNAME = process.env.mongodb_database;
 
 export async function connectDatabase() {
-    const url = `mongodb+srv://${USER}:${KEY}@cluster0.bfble3u.mongodb.net/events?retryWrites=true&w=majority`;
+    const url = `mongodb+srv://${USER}:${KEY}@${CLUSTER}.bfble3u.mongodb.net/${DBNAME}?retryWrites=true&w=majority`;
     const client = new MongoClient(url);
     client.connect();
     return client;
