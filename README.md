@@ -4,7 +4,13 @@
 - ReactJS
 - Context API
 - CSS
+- Vercel
 
 Running the project:
 
 ### `yarn start`
+
+## Demo
+
+[demo-page](https://next-js-max-lovat.vercel.app/)
+
