@@ -4,6 +4,7 @@
 - ReactJS
 - Context API
 - CSS
+- MongoDB
 - Vercel
 
 Running the project:
